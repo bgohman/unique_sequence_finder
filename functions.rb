@@ -10,6 +10,9 @@ def ask_user_for_dictionary
     dictionary = File.open("dictionaries/medium_dictionary.txt", "r")
   when "final"
     dictionary = File.open("dictionaries/dictionary.txt", "r")
+  else
+    puts "That response is not recognized.  Processing the sample dictionary..."
+    dictionary = File.open("dictionaries/sample_dictionary.txt", "r")
   end
   return dictionary
 end
